@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Travel Wishlist</title>
+  </head>
+  <body>
+    <h1>My Travel Wishlist</h1>
+    <ul>
+      <% countries.forEach(country => { %>
+      <li><%= country.name %></li>
+      <% }); %>
+    </ul>
+    <form action="/api/countries" method="post">
+      <input type="text" name="name" placeholder="Country Name" />
+      <input type="text" name="alpha2Code" placeholder="Alpha 2 Code" />
+      <input type="text" name="alpha3Code" placeholder="Alpha 3 Code" />
+      <button type="submit">Add Country</button>
+    </form>
+  </body>
+</html>
